@@ -37,10 +37,8 @@ final class ViewController: UIViewController {
         let animation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
         animation.fromValue = 1
         animation.toValue = 0
-        animation.duration = 2
+        animation.duration = 3
         animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        animation.isRemovedOnCompletion = false
-        animation.fillMode = .forwards
         shapeLayer.add(animation, forKey: nil)
     }
     
