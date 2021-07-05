@@ -23,14 +23,27 @@
                                     <action selector="buttonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xLR-2v-gVu"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epU-St-r43">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="WDW-7e-lFl"/>
+                                    <constraint firstAttribute="width" constant="200" id="hB8-YP-Pf2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NxQ-6p-sev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4If-mi-XmK"/>
                             <constraint firstItem="NxQ-6p-sev" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Ii4-4p-qgE"/>
+                            <constraint firstItem="epU-St-r43" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J4t-qF-KH6"/>
+                            <constraint firstItem="epU-St-r43" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oqu-qk-Hlb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myView" destination="epU-St-r43" id="s8Y-oa-RhE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,6 +53,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
