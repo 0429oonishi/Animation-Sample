@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxQ-6p-sev">
-                                <rect key="frame" x="184" y="94" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xLR-2v-gVu"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epU-St-r43">
                                 <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -31,13 +24,35 @@
                                     <constraint firstAttribute="width" constant="200" id="hB8-YP-Pf2"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PgQ-QC-nYF">
+                                <rect key="frame" x="157" y="74" width="100" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxQ-6p-sev">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <state key="normal" title="CABasic"/>
+                                        <connections>
+                                            <action selector="CABasicButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xLR-2v-gVu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7N-7p-Ffd">
+                                        <rect key="frame" x="0.0" y="30" width="100" height="30"/>
+                                        <state key="normal" title="CAKeyframe"/>
+                                        <connections>
+                                            <action selector="CAKeyframeButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEu-JH-4zX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HDA-Xd-e7I"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NxQ-6p-sev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4If-mi-XmK"/>
-                            <constraint firstItem="NxQ-6p-sev" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Ii4-4p-qgE"/>
                             <constraint firstItem="epU-St-r43" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J4t-qF-KH6"/>
+                            <constraint firstItem="PgQ-QC-nYF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="PCK-jd-uJm"/>
+                            <constraint firstItem="PgQ-QC-nYF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ry0-KS-IkY"/>
                             <constraint firstItem="epU-St-r43" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oqu-qk-Hlb"/>
                         </constraints>
                     </view>

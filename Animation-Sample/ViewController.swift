@@ -19,6 +19,11 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupMyView()
+        
+    }
+    
+    private func setupMyView() {
         path = UIBezierPath()
         path.move(to: CGPoint(x: width / 2, y: 0.0))
         path.addLine(to: CGPoint(x: 0.0, y: height / 2))
@@ -30,10 +35,10 @@ final class ViewController: UIViewController {
         shapeLayer.path = path.cgPath
         shapeLayer.lineWidth = 3
         myView.layer.mask = shapeLayer
-        
     }
     
-    @IBAction private func buttonDidTapped(_ sender: Any) {
+    // MARK: - CABasicAnimation
+    @IBAction private func CABasicButtonDidTapped(_ sender: Any) {
         let animation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
         animation.fromValue = 1
         animation.toValue = 0
@@ -41,6 +46,12 @@ final class ViewController: UIViewController {
         animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         shapeLayer.add(animation, forKey: nil)
     }
+    
+    // MARK: - CAKeyframe
+    @IBAction private func CAKeyframeButtonDidTapped(_ sender: Any) {
+        
+    }
+    
     
     
 }
