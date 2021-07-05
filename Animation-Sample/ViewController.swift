@@ -47,12 +47,20 @@ final class ViewController: UIViewController {
         shapeLayer.add(animation, forKey: nil)
     }
     
-    // MARK: - CAKeyframe
+    // MARK: - CAKeyframeAnimation
     @IBAction private func CAKeyframeButtonDidTapped(_ sender: Any) {
         
     }
     
+    // MARK: - CAAnimationGroup
+    @IBAction private func CAGroupButtonDidTapped(_ sender: Any) {
+        
+    }
     
+    // MARK: - CATransaction
+    @IBAction private func CATransactionButtonDidTapped(_ sender: Any) {
+        
+    }
     
 }
 
