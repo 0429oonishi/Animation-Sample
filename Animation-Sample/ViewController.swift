@@ -49,7 +49,18 @@ final class ViewController: UIViewController {
     
     // MARK: - CAKeyframeAnimation
     @IBAction private func CAKeyframeButtonDidTapped(_ sender: Any) {
-        
+        let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 0, y: 0))
+        path.addCurve(to: CGPoint(x: 100, y: 100),
+                      control1: CGPoint(x: 0, y: 100),
+                      control2: CGPoint(x: 100, y: 100))
+        path.addCurve(to: CGPoint(x: -100, y: 100),
+                      control1: CGPoint(x: -50, y: 50),
+                      control2: CGPoint(x: 100, y: -100))
+        animation.path = path
+        animation.duration = 3
+        shapeLayer.add(animation, forKey: nil)
     }
     
     // MARK: - CAAnimationGroup
